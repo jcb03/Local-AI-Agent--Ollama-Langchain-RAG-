@@ -8,7 +8,6 @@ import pandas as pd
 # Load the CSV file into a pandas DataFrame
 df=pd.read_csv("realistic_restaurant_reviews.csv")
 
-# emberddings
 # Create a list of Document objects from the DataFrame
 embeddings= OllamaEmbeddings(model="mxbai-embed-large") #model="mxbai-embed-large" is the default
 db_location = "./chrome_langchain_db"
@@ -23,8 +22,8 @@ if add_documents:
 
     for i, row in df.iterrows():
         document=Document(
-            page_content=row["Title"] + " " + row["review"],
-            metadata={"rating": row["rating"], "date": row["Date"]},
+            page_content=row["Title"] + " " + row["Review"],
+            metadata={"rating": row["Rating"], "date": row["Date"]},
             id=str(i)
         )
         ids.append(str(i))

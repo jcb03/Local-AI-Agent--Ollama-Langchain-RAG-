@@ -23,9 +23,9 @@ while True:
 
     # Use the retriever to get relevant reviews
     reviews = retriever.invoke(question)
-    
+
     # Define the input data
-    result = chain.invoke({"reviews":[],"questions": question})
+    result = chain.invoke({"reviews": reviews, "questions": question})
 
     # Print the result
     print(result)
