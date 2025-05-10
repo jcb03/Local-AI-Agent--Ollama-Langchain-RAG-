@@ -6,7 +6,7 @@ import pandas as pd
 
 # pandas dataframe
 # Load the CSV file into a pandas DataFrame
-df=pd.read_csv("reslistic_restaurant_reviews.csv")
+df=pd.read_csv("realistic_restaurant_reviews.csv")
 df.dropna(subset=["review"], inplace=True)
 
 # emberddings
