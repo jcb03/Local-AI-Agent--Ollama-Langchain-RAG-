@@ -42,3 +42,4 @@ if add_documents:
 
 # connecting to the vector store and llm
 retriever = vectore_store.as_retriever(search_kwargs={"k": 5})
+# Save the vector store to disk

@@ -13,7 +13,8 @@ here are some questions: {questions}"""
 prompt = ChatPromptTemplate.from_template(template)
 chain = prompt | model # Create a chain with the prompt and model
 
-
+# Main loop to ask questions
+# and get answers from the model
 while True:
     print("\n\n----------------------------------------")
     question=input("Enter your question (or 'exit' to quit): ")
